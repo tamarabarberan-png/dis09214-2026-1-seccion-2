@@ -2,7 +2,7 @@
 
 # Pensamiento computacional  
 
-4 pilares:    
+## 4 pilares:    
 
 1.Descomposición  
 2.Reconocimiento de patrones  
@@ -35,10 +35,10 @@ Es el diseño de una serie de reglas ordenadas para resolver el problema. Es el 
 2. Interacción Continua (Input de Datos) Es cuando el sistema reacciona constantemente al movimiento o estado del usuario, sin necesidad de hacer algo especifico (clic).  
 • En el código: Usar mouseX o mouseY directamente para afectar el tamaño, color o velocidad de algo.  
 
-# FUNCIONES PROPIAS  
+### FUNCIONES PROPIAS  
 
 Modularidad - Reusabilidad  
 
-```function Nombredelafunción() {  }  
+```function Nombredelafunción() {  }  ```
 
 
