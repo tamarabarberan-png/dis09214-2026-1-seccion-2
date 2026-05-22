@@ -1,4 +1,4 @@
-# sesión 06 - 22/05
+# sesión 08 - 22/05 solemne 2
 # Estereotipos de género  
 **Amaro Beltrán**  
 
