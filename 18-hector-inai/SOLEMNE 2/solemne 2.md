@@ -55,4 +55,5 @@ La interactividad funciona como un bucle de tensión y liberación con dos estad
 * **Estado Pasivo (Sin Click):** El sistema invita al usuario con el texto "haz click para expresarte". El entorno es gris, ordenado y monótono. El individuo está camuflado, quieto y en silencio dentro de una estructura rígida (los círculos).
 * **Estado Activo (Con Click):** Al presionar, el usuario desata una transformación gradual. El fondo se vuelve rojo, la cuadrícula opresora se borra y el individuo rompe la norma: estalla en colores, tiembla violentamente y el lienzo es bombardeado por líneas de interferencia, ojos y bocas. Al soltar el mouse, el sistema se drena y regresa de inmediato al orden inicial.
 
-![Diagrama de flujo](diagrama de flujo.png)
+![Diagrama de flujo](<img width="4961" height="2063" alt="diagrama de flujo" src="https://github.com/user-attachments/assets/cc76bf9f-405e-4ee6-8e41-030ee69d54cb" />
+)
