@@ -116,7 +116,7 @@ text('Fea',x, y); //Se le añade el texto "Fea" y se crea un nested loop
 }
 push();  //Se abre un estado de "capa"
 rectMode(CENTER); // se activa la función para crear las figuras desde el centro
-stroke(255,mouseY) //Se colorea el borde de blanco
+stroke(69,69,69,mouseY) //Se colorea el borde de gris
 strokeWeight(bordeCuadrado);  //Se le asigna el tamaño al borde
 translate(295,200); // Se traslada la figura desde el punto 295 y 200
 rotate(giroRect*30); // Rota la figura según el ángulo 
