@@ -94,7 +94,7 @@ function mousePressed(){
 
 ``` 
 
-<img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/944d4d19-d56d-4739-87c2-4562af4645e9" />
+<img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/944d4d19-d56d-4739-87c2-4562af4645e9" />
 
 ejemplo3 bandera gay:
 
