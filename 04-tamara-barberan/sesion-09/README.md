@@ -15,4 +15,9 @@
  
  * EN PROGRAMACIÓN SE CUENTA DESDE 0!!!
  * Ejemplo ( 0, 1, 2, 3, 4, etc)
- * 
+
+**createCapture(VIDEO);**
+
+* crear la variable para la captura, declarar una variable global que guardará el flujo de video de tu cámara web
+* inicializar la cámara en el function setup() utilizamos el comando especial creativeCapture(video); esto le pedirá permiso al navegagador para encender la cámara del computador, tambien definimos un tamaño con captura.size(x,y); y es muy importante agregar captura.hide(); para que esconda el video que HTML pone abajo por default.
+* dibujar la cámara en el function draw();, usamos la funcion image ().p5.js toma cada cuadro (frame) de la cámara y lo dibuja en el lienzo en tiempo real. 
