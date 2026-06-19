@@ -1,6 +1,6 @@
 # sesión 06 - 14/04
 
-##SONIDOS:
+## SONIDOS:
 
 **Paso 1: Subir sus sonidos a p5js**
 
