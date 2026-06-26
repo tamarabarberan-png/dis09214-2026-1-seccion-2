@@ -1,440 +1,77 @@
-# Repo solemne 2
-# Solemne 2 pensamiento computacional
+# Sesión 08 - 05/06
+# ESTADOS Y CÁMARA WEB
 
-## Información del proyecto:
+Sketch con estados diferentes 
+- 3 pantallas y que se vuelva a reiniciar(El examen)
 
-**Nombre del proyecto:** Nunca es suficiente 
+1. Crear y definir variable de estados:
+- Al principio de tu código (fuera de las funciones), debes crear una variable que guarde en qué pantalla nos encontramos. Empezará en 0.
+- let estado = 0; // 0 = Inicio, 1 = Experiencia, 2 = Final
 
-**Autora:** Denisse Delgado  
+2. Configurar el lienzo(function setup):
+- Creamos el lienzo de fondo 
+<img width="422" height="218" alt="Captura de pantalla 2026-06-19 201352" src="https://github.com/user-attachments/assets/32832bba-50d8-4a1c-bd36-efb34333df17" />
 
----
+3. Crear la estructura del estado(Function draw):
+- Break es para salir de un ciclo
+- Aquí usamos un switch Dependiendo del valor de la variable estado, el programa dibujará una cosa u otra.
+<img width="285" height="361" alt="Captura de pantalla 2026-06-19 201432" src="https://github.com/user-attachments/assets/fca19aa8-b8f1-47dd-b1cb-bf290ed9e743" />
 
-# Descripción objetiva
+4. Programar visualmente cada estado(Funciones propias):
+- Ahora creamos las funciones que inventamos en el paso anterior. Cada una tendrá un diseño y un color diferente para que se note el cambio.
+<img width="855" height="715" alt="Captura de pantalla 2026-06-19 201513" src="https://github.com/user-attachments/assets/d53a005c-a2c5-4a13-b563-cf32320d709f" />
 
-## ¿Qué es el proyecto?
-  * Este proyecto es una visualización interactiva realizada en p5.js que representa la presión estética y social ejercida principalmente sobre las mujeres. A través de imágenes, movimiento, texto y transformación visual, el sistema muestra cómo las expectativas externas pueden afectar la percepción de la identidad y del cuerpo.
+5. La lógica del cambio y del reinicio:
+- Para pasar de un estado a otro y lograr que vuelva al comienzo, usamos la función
+mousePressed() Cada vez que hagas un clic, la variable aumentará. Si llega a 3 (después del estado 2), volverá a 0.
+- Para el examen poner width /2, height/2 para poner algo al centro porque si no se va a deformar
+- Se puede programar que cambie de pantalla con un enter
+- Ej profe: (https://editor.p5js.org/PoliMujica/sketches/9vHePO158)
 
----
+## HAY MUCHAS FORMAS DIFERENTES DE CAMBIAR DE UN ESTADO A OTRO
+1. Interacción con el Teclado: 
+- 1.1. Por barra espaciadora o Enter:
+<img width="628" height="203" alt="Captura de pantalla 2026-06-19 201557" src="https://github.com/user-attachments/assets/8a310366-eb95-4451-81d0-578c8fce0644" />
 
-## ¿Qué se ve en pantalla?
+- 1.2. Por teclas específicas (ej. Números): Puedes hacer que la tecla 1 te lleve al inicio, la 2 a la experiencia y la 3 al final.
+<img width="606" height="182" alt="1" src="https://github.com/user-attachments/assets/0154ff3a-ffe4-4a2e-9f23-62e81573874a" />
 
-  * En pantalla aparecen dos figuras femeninas, una más grande y otra más pequeña y triste, conectadas mediante una flecha que representa una transformación progresiva.
+- Ej profe: https://editor.p5js.org/PoliMujica/sketches/4lzOYE8KL
 
-  * El usuario puede interactuar moviendo el mouse horizontalmente, lo que modifica el comportamiento visual de los elementos.
+2. Botones Reales en la Pantalla: En lugar de hacer clic en cualquier parte de la pantalla, puedes crear un botón real de HTML usando la librería de p5.js. Esto es mucho más profesional para menús.
+- Ej profe: https://editor.p5js.org/PoliMujica/sketches/peTm3oGty
+<img width="572" height="360" alt="1" src="https://github.com/user-attachments/assets/34e56801-d89c-4b45-a99e-03d6272d0aaa" />
 
-  * También aparece una nube compuesta por palabras relacionadas con estándares de belleza y exigencias sociales, además de partículas y elementos gráficos ambientales.
+3. Zonas de Clic (Botones dibujados con rect o ellipse): Si no quieres usar botones de
+HTML y prefieres dibujar tus propios botones con rect(), puedes evaluar si el mouse estaba dentro de esa caja al hacer clic.
+- Ej profe:https://editor.p5js.org/PoliMujica/sketches/iw-gjFhK8
+<img width="738" height="228" alt="1" src="https://github.com/user-attachments/assets/38aa9e26-78de-4e72-9198-a0f9fbff6de3" />
 
----
+4. Interacciones Automáticas (Por Tiempo o Puntaje): Por Tiempo (Temporizador): Ideal para una pantalla de introducción (Splash Screen) que dura 3 segundos y pasa sola al menú.
+- Ej profe: https://editor.p5js.org/PoliMujica/sketches/_AunxbPWQ
+<img width="442" height="87" alt="1" src="https://github.com/user-attachments/assets/cdcd22f1-6ede-4c17-b6f0-a90873d8a8ae" />
 
-## ¿Qué elementos visuales aparecen?
+- Processing community day: 26 y 27 junio
+- Las notas del examen se promedia con la de los encargos que vale un 15%
 
-- Dos imágenes femeninas
-- Palabras flotantes relacionadas con presión social estética principalmente
-- Partículas en movimiento
-- Círculos superpuestos que forman una nube visual
-- Líneas y grillas decorativas
-- Textos reflexivos
-- Cambios de color en el fondo
-- Movimiento y rotación dinámica
+### INTERACCIÓN CON EL MUNDO FÍSICO
+CÁMARA WEB
+1. Crear la variable para la captura, declarar una variable global que guardará el flujo de video de tu cámara web.
 
----
+2. Inicializar la cámara en el function setup() utilizamos el comando especial createCapture(VIDEO) esto le pedirá permiso al navegador para encender la cámara del
+computador. También definimos tamaño con captura.size(x,y); y es muy importante agregar captura.hide(); para que esconda el video que HTML pone abajo por default.
 
-# Descripción conceptual
+3. Dibujar la cámara en el function draw() usamos la función image(). p5.js toma cada cuadro (frame) de la cámara y lo dibuja en el lienzo en tiempo real.
+- Ejemplo profe: https://editor.p5js.org/PoliMujica/sketches/PhkuD7kWU
+<img width="392" height="302" alt="1" src="https://github.com/user-attachments/assets/036a6a0a-e847-4119-9b77-572739622665" />
 
-## Idea central del proyecto y relación con el sistema diseñado
+- Ejemplos cámara interactiva
+    * FILTROS: (https://editor.p5js.org/PoliMujica/sketches/sK_BYepGn)
+(https://p5js.org/reference/p5/filter/)
 
-  * La idea central del proyecto es representar cómo la presión estética externa puede modificar la percepción corporal y emocional de una persona, lo cúal está dirigido principalmente a mujeres.
+    * LOADPIXELS: (https://editor.p5js.org/PoliMujica/sketches/OVsazOghk)
+(https://p5js.org/reference/p5/loadPixels/)
 
-  * El sistema utiliza la interacción del mouse como metáfora de la presión social: mientras más avanza el usuario hacia la derecha, mayor es la intensidad visual de las exigencias sociales, por eso cambia de color y distintas figuras se agrandan.
+    * PINCEL DE (https://editor.p5js.org/PoliMujica/sketches/cYCPjuXft)
 
-  * La transformación de las figuras, el aumento del ruido visual y el cambio de ambiente simbolizan cómo estas expectativas afectan la autoimagen.
-
----
-
-## Regla de oro del sistema:
-
-  * “A mayor presión social, mayor distorsión de la percepción corporal.”
-
-Esta regla se traduce visualmente mediante:
-- Reducción de una figura femenina
-- Crecimiento de la segunda figura
-- Intensificación del fondo
-- Mayor presencia de palabras y ruido visual
-
----
-
-## Relación con la problemática de género
-
-   * El proyecto aborda la presión estética impuesta históricamente sobre las mujeres por medios de comunicación, redes sociales y estándares culturales.
-
-   * Las palabras flotantes representan discursos repetitivos asociados a la apariencia física, juventud y perfección.
-
-   * El sistema busca evidenciar cómo estas exigencias externas pueden alterar la percepción de la identidad y generar tensión emocional.
-
----
-
-# Input / Output y sistema
-
-## INPUT
-
-- Los datos de entrada del sistema son:
-    * Posición horizontal del mouse (`mouseX`)
-    * Click del mouse (`mousePressed`)
-    * Tiempo/frames (`frameCount`)
-
----
-
-## Procesamiento
-
-- El sistema procesa los datos utilizando:
-    * Condicionales (`if / else`)
-    * Mapeo de valores (`map()`)
-    * Funciones matemáticas (`sin()`)
-    * Escalado (`scale()`)
-    * Rotación (`rotate()`)
-    * Traducción (`translate()`)
-
-- El valor de `mouseX` controla:
-    * Escala de las imágenes
-    * Intensidad del fondo
-    * Tamaño del texto
-    * Velocidad de rotación
-    * Sensación de presión visual
-
----
-
-## OUTPUT
-
-- La respuesta visual del sistema incluye:
-    * Cambio de tamaño de las figuras
-    * Movimiento oscilatorio
-    * Cambio de color del fondo
-    * Aparición más intensa de palabras
-    * Rotación de la nube visual
-    * Ambiente dinámico mediante partículas
-
----
-
-# Pensamiento computacional
-
-## Reglas del sistema
-
-### Input
-El usuario interactúa mediante el movimiento del mouse.
-
-### Procesos
-El sistema interpreta la posición del mouse y transforma variables visuales usando:
-- Condicionales
-- Mapeos numéricos
-- Funciones 
-- Animación en tiempo real
-
-### Output
-El sistema genera cambios visuales que representan distintos niveles de presión emocional y estética.
-
----
-
-## Explicación de la interactividad
-
-- La interacción principal ocurre con el movimiento horizontal del mouse.
-
-- Hacia la izquierda:
-     * Ambiente más calmado
-     * Menor presión visual
-     * Figura principal más grande
-
-- Hacia la derecha:
-     * Fondo más intenso
-     * Más ruido visual
-     * Figura principal más pequeña
-     * Mayor protagonismo de la figura secundaria
-
-- El click del mouse también modifica aleatoriamente el color del fondo.
-
----
-
-# Referentes
-
-## Referentes visuales
-
-### Barbara Kruger:
-- Uso de texto como crítica social y cuestionamiento de los estándares impuestos sobre el cuerpo femenino.
-
-### Jenny Holzer:
-- Uso de frases y mensajes como elemento visual y político.
-
----
-
-## Referentes conceptuales
-
-### Presión estética y género
-- El proyecto toma como referencia las problemáticas relacionadas con:
-    * Estándares irreales de belleza
-    * Autoimagen corporal
-    * Influencia de redes sociales
-    * Exigencias culturales hacia las mujeres
-
----
-
-# Diagrama de flujo
-<img width="1024" height="1536" alt="8e72dbe5-e323-47af-bf82-6b7e79e2f746" src="https://github.com/user-attachments/assets/6421a597-2e44-46bf-81aa-395556c64cd3" />
-
-<img width="1024" height="1536" alt="Flujo visual" src="https://github.com/user-attachments/assets/83446b40-0b83-499b-a763-2ff4b43a635b" />
-
-# Código:
-
-```
-// Imágenes principales del proyecto
-let mujerGrande; // Imagen “mujer grande” (Representa estado inicial o más fuerte)
-// Funciona como punto de partida de la transformación visual causada por la presión social.
-let mujerPequena; // Imagen “mujer pequeña” (Representa el efecto de la presión estética constante)
-
-// Palabras dentro de la nube
-let palabras = [
-  // Lista frases o palabras que representan discursos sociales internalizados, exigencias estéticas repetitivas que afectan la autoimagen, generando una “voz externa” constante dentro del espacio visual.
-  "Sé perfecta",
-  "Más delgada",
-  "Sin arrugas",
-  "Más delicada",
-  "Piel perfecta",
-  "Cintura pequeña",
-  "Simétrica",
-  "Más bonita",
-  "Más flaca",
-  "Naiz perfecta",
-  "Sempre joven",
-  "Maquillada",
-  "Cuerpo perfecto",
-];
-
-// Partículas ambientales que se mueven por el canvas
-let particulas = []; // Contiene partículas que simulan “ruido visual” o ambiente nostálgico
-
-// Variables propias
-let presion = 0; // Nivel de presión (Derivado del mouse)
-
-let colorFondo = 10; // Color del fondo dinámico según interacción con el mouse
-
-let rotacionNube = 0; // Controla la rotación progresiva de la nube de palabras.
-
-// Carga de imágenes
-function preload() {
-  // Carga de imágenes antes de iniciar el programa
-  mujerGrande = loadImage("k1.png");
-
-  mujerPequena = loadImage("k2.png");
-}
-
-// Configuración inicial
-function setup() {
-  createCanvas(600, 550);
-
-  // Centra imágenes y texto para facilitar composición visual
-  imageMode(CENTER);
-  textAlign(CENTER, CENTER);
-
-  noCursor(); // Oculta el cursor para una experiencia más inmersiva
-
-  // Partículas que se mueven por el canvas
-  for (let i = 0; i < 100; i++) {
-    // Genera partículas aleatorias que caen verticalmente
-    particulas.push({
-      x: random(width), // Posición horizontal aleatoria
-      y: random(height), // Posición vertical aleatoria
-      size: random(1, 4), // Tamaño pequeño tipo polvo/ruido
-      speed: random(0.2, 1), // Velocidad de caída
-      alpha: random(20, 120), // Transparencia variable (Profundidad visual)
-    });
-  }
-}
-
-// Bucle principal
-function draw() {
-  actualizarPresion(); // Actualiza estado de presión según mouse
-  background(colorFondo); // Fondo dinámico
-
-  // Dibujo de capas visuales
-  dibujarFondo(); // Grilla + ambiente
-  dibujarParticulas(); // Partículas flotantes
-  dibujarBurbuja(); // Nube/presión social
-  dibujarTransformacion(); // Relación visual entre dos estados corporales
-  dibujarTexto(); // Mensajes narrativos
-
-  rotacionNube += map(mouseX, 0, width, 0.0005, 0.03); // Rotación progresiva de la nube de presión
-}
-
-// Cambia el fondo de color
-function actualizarPresion() {
-  // Convierte posición del mouse en un valor entre 0 y 1
-  presion = map(mouseX, 0, width, 0, 1);
-  // Cambia el color del fondo según la posición del mouse
-  // Esto representa distintos niveles de tensión emocional
-
-  // If/Else
-  if (mouseX < width / 3) {
-    colorFondo = color(10, 10, 18); // Más oscuro / Calmado
-  } else if (mouseX < width / 1.5) {
-    colorFondo = color(35, 10, 20); // Intermedio / Tensión
-  } else {
-    colorFondo = color(80, 0, 20); // Más intenso / Presión social alta
-  }
-}
-
-// Transformación del tamaño de las imágenes
-function dibujarTransformacion() {
-  // Escala de la imagen grande (Se reduce con la presión social)
-  let escalaGrande = map(mouseX, 0, width, 1, 0.25);
-
-  // Escala de la imagen pequeña (Aumenta con la presión social)
-  let escalaTriste = map(mouseX, 0, width, 0.15, 1);
-
-  // Movimiento suave tipo “Respiración”
-  let movimientoY = sin(frameCount * 0.03) * 8;
-
-  // Mujer grande(Izquierda)
-  push();
-
-  translate(180, 360 + movimientoY);
-  rotate(sin(frameCount * 0.02) * 0.03);
-  scale(escalaGrande);
-  tint(255, 230);
-  image(mujerGrande, 0, 0, 160, 350);
-
-  pop();
-
-  // Flecha simbólica de transformación
-  fill(255, 120, 140);
-  noStroke();
-  textSize(45);
-  text("→", 320, 350);
-
-  // Mujer triste(Derecha)
-  push();
-  translate(420, 310 - movimientoY);
-  scale(escalaTriste);
-  rotate(sin(frameCount * 0.04) * 0.02);
-  image(mujerPequena, 0, 0, 220, 300);
-  pop();
-}
-
-// Nube / Burbuja que se produce al sobrepensar debido a todo el estrés externo que las espectativas producen
-function dibujarBurbuja() {
-  // Nube de círculos aleatorios que representan ruido mental/social
-  push();
-  translate(390, 150);
-  rotate(rotacionNube);
-  noFill();
-
-  for (let i = 0; i < 120; i++) {
-    stroke(255, 35);
-
-    ellipse(
-      random(-70, 70),
-      random(-70, 70),
-
-      random(50, 70),
-      random(50, 70)
-    );
-  }
-
-  pop();
-
-  // Círculos decorativos adicionales (Sensación de presión)
-  noFill();
-  stroke(255, 60);
-
-  ellipse(250, 130, 20);
-  ellipse(220, 155, 15);
-  ellipse(202, 180, 10);
-  ellipse(450, 260, 20);
-  ellipse(460, 300, 15);
-  ellipse(450, 330, 10);
-
-  // Palabras(Representan las expectativas que comúnmente recaen sobre las mujeres) que se mueven
-  push();
-  for (let i = 0; i < palabras.length; i++) {
-    fill(255, 160, 190);
-
-    noStroke();
-
-    // Random()
-    let tamaño = map(mouseX, 0, width, 0, 16); // Tamaño de texto depende del mouse (Más presión = Más grande, visible, asfixiante)
-    textSize(tamaño);
-
-    // Movimiento ondulatorio de las palabras
-    let x = 403 + sin(frameCount * 0.01 + i) * 100;
-    let y = 90 + i * 10;
-
-    textAlign(CENTER);
-    text(palabras[i], x, y);
-  }
-  pop();
-}
-
-// Partículas
-function dibujarParticulas() {
-  for (let p of particulas) {
-    noStroke();
-    fill(255, p.alpha);
-
-    ellipse(p.x, p.y, p.size); // Dibujar partículas
-    p.y += p.speed; // Movimiento vertical constante
-
-    if (p.y > height) {
-      // Reinicio cuando sale del canvas
-      p.y = 0;
-    }
-  }
-}
-
-// Fondo
-
-function dibujarFondo() {
-  // Grilla sútil que genera estructura visual
-
-  for (let i = 0; i < width; i += 40) {
-    stroke(255, 10);
-
-    line(i, 0, i, height);
-
-    line(0, i, width, i);
-  }
-
-  // Forma decorativa transparente tipo base
-  noStroke();
-  fill(255, 100, 150, 18);
-
-  ellipse(width / 2.5, height - 20, 350, 30);
-}
-
-// Textos
-function dibujarTexto() {
-  noStroke();
-  textAlign(LEFT); // Texto alineado a la izquierda (Mensaje interno)
-  textSize(14);
-  fill(255, 120, 140);
-
-  text(
-    "La presión no cambia quién eres,\nsolo distorsiona cómo te ves.",
-    30,
-    60
-  );
-
-  textAlign(RIGHT); // Texto alineado a la derecha (Mensaje de reflexión)
-  text("Apaga el ruido exterior,\nsolo escúchate a ti.", 560, 500);
-
-  // Líneas decorativas (Encuadre visual)
-  stroke(255, 40);
-  line(20, 40, 20, 80);
-  line(570, 520, 570, 480);
-}
-
-// Interacción con el mouse
-function mousePressed() {
-  // Cambia el fondo de forma aleatoria al deslizar
-  colorFondo = color(random(0, 40), 0, random(10, 30));
-}
-```
-
-- Link a su Sketch en p5.js (con permiso de edición)
-(https://editor.p5js.org/denisse.delgado2/sketches/5aRY-Q9a7)
+    * Volumen del micro: (https://editor.p5js.org/PoliMujica/sketches/L9QBzREF3)
