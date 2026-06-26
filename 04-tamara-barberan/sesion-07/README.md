@@ -1,20 +1,28 @@
-# clase 7 
+# LOOPS, WHILE & FOR
 
-1-  Descomposición: consiste tomar un problema complejo y romperlo en partes mas pequeñas en partes iguales 
+**BUCLE**
+* En informática: Serie de instrucciones que se repiten indefinidamente mientras no se cumpla una condición previamente establecida.
 
-* En diseño: si quieres visualizar la "Brecha salarial", no progrmas tod de una vez, primero ves como se ve el problema A, luego el problema B 
+**LOOP**
+* Es una estructura de control que permite ejecutar un bloque de instrucciones de manera repetida mientras se cumpla una condición específica o hasta que se alcance un estado determinado.
 
-2- Reconosimiento de patrones: Es observar tendencias o regularidades dentro de un problema.
+**WHILE**
+* Los bucles while son útiles para repetir instrucciones mientras una condición sea verdadera.
+* SINTAXIS: While(condición booleana) { ejecuta este código si es true }.
 
-3- Abstracción: Es filtrar la información innecesaria y quedarse solo con las características que definen el problema, ( es crear una representaciómn simbólica del problema).
+**for**
+* Una forma de repetir un bloque de código cuando se conoce el número de iteraciones.
+* Los bucles `for` son útiles para repetir instrucciones un número determinado de veces.
+* SINTAXIS: for(inicialización variable; condición booleana; actualización){ Lo que queremos que pase cuando la condición sea verdadera }.
 
-4-Algoritmos: es el diseño de una serie de reglas ordenadas para resolver el problema, es el plan de acción que debe seguir el sistema.
+**NESTED LOOPS: Un loop dentro de otro loop**
+* Un for dentro de otro for
+* SINTAXIS: for(inicialización variable; condición booleana; actualización) { lo que queremos que pase cuando la condición sea verdadera
+  for(inicialización variable; condición booleana; actualización) { lo que queremos que pase cuando la condición sea verdadera
+  }
+}
 
-## tipos de interacción 
-
-* Interacción discreta (eventos): cuando ocurre un evento específico (clic) y el sistema responde con una acción
-
-### Funciones propias:
-
-1- Modularidad
-2- reusabilidad
+**frameCount**
+* Variable numérica que registra la cantidad de fotogramas dibujados desde que comenzó el boceto.
+* El valor de `frameCount` es 0 dentro de `setup()`.
+* Se incrementa en 1 cada vez que finaliza la ejecución del código en `draw()`.
