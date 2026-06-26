@@ -43,3 +43,17 @@
 * Los referentes visuales del proyecto provienen principalmente de posters que abordan esta problemática, principalmente de un poster de la Facultad de Ciencias Culturales (FIB) de la Universidad Diponegoro (Undip) en Indonesia,fue una pieza de comunicación visual creada por los estudiantes y la facultad para concientizar y luchar contra la violencia y el acoso sexual dentro del campus universitario.
 * En general fue ese poster que me dio la iniciativa para crear mi obra y la principal inspiración, ya que me atrajo demasiado que el poster jugará con colores limitados, especialmente el uso del rojo, negro y sombras para transmitir tensión, peligro y ansiedad.Examen: Tamara Barberan, Camila Sepúlveda.
 
+<img width="736" height="1040" alt="Poster" src="https://github.com/user-attachments/assets/d9ab83bb-c60a-4856-b07d-e8832d0950aa" />
+
+**DIAGRAMA DE FLUJO:**
+
+ <img width="512" height="384" alt="Simple Beige Flowchart Infographic Graph - 1" src="https://github.com/user-attachments/assets/796f42d3-ed35-423e-800a-e2a40277ea12" />
+<img width="512" height="384" alt="Simple Beige Flowchart Infographic Graph - 2" src="https://github.com/user-attachments/assets/ab0927d0-4169-4c95-a129-e6bd7519febd" />
+<img width="512" height="384" alt="Simple Beige Flowchart Infographic Graph - 3" src="https://github.com/user-attachments/assets/f5aa2d02-9bb9-4237-a636-02dbea2818eb" />
+<img width="512" height="384" alt="Simple Beige Flowchart Infographic Graph - 4" src="https://github.com/user-attachments/assets/d9f62648-ca6c-4ceb-b1f5-6fb76e356bfe" />
+<img width="512" height="384" alt="Simple Beige Flowchart Infographic Graph - 5" src="https://github.com/user-attachments/assets/93270a31-6647-4a4c-b580-2fa8f340ba0a" />
+<img width="512" height="384" alt="Simple Beige Flowchart Infographic Graph - 6" src="https://github.com/user-attachments/assets/a360f3d9-c87d-4417-adc8-c4b2d471f295" />
+<img width="512" height="384" alt="Simple Beige Flowchart Infographic Graph - 7" src="https://github.com/user-attachments/assets/9ccd13b4-e782-4832-a6d7-60f5884cb67f" />
+
+**LINK AL SKETCH P5.JS**
+[p5js.org](https://editor.p5js.org/tamara.barberan/sketches/bkN77vT0a) 
